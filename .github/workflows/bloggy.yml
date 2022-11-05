@@ -2,16 +2,14 @@ on:
     push:
         branches:
             - master
-name: Build and deploy on push
+name: Build & Deploy Zola SSG
 jobs:
     build:
         runs-on: ubuntu-latest
-        if: github.ref == 'refs/heads/main'
         steps:
             - name: checkout
               uses: actions/checkout@v3.0.0
             - name: deploy_zola
               uses: shalzz/zola-deploy-action@v0.16.1
               env:
-                PAGES_BRANCH: main
                 TOKEN: ${{ secrets.ZOLA_BLOG }}
