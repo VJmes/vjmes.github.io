@@ -14,4 +14,3 @@ jobs:
               env:
                 PAGES_BRANCH: pages
                 TOKEN: ${{ secrets.ZOLA_BLOG }}
-                GITHUB_HOSTNAME: github.vjmes.net
