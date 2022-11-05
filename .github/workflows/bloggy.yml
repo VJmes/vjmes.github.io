@@ -3,7 +3,6 @@ on:
     push:
         branches:
             - master
-name: Build & Deploy Zola SSG
 jobs:
     build:
         runs-on: ubuntu-latest
