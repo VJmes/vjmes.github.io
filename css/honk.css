@@ -1,5 +1,12 @@
-.honk {
+body {
+    height: 100%;
+    width: 100%;
     display: flex;
-    justify-content: centre;
-    align-items: centre;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+}
+
+i.honk {
+    text-decoration: underline;
 }
