@@ -12,4 +12,6 @@ jobs:
             - name: deploy_zola
               uses: shalzz/zola-deploy-action@v0.16.1
               env:
+                PAGES_BRANCH: pages
                 TOKEN: ${{ secrets.ZOLA_BLOG }}
+                GITHUB_HOSTNAME: github.vjmes.net
