@@ -1,0 +1,146 @@
+body {
+    background-image: url(/dust-bg.svg), none;
+    background-size: 25% auto;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    // flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+@font-face {
+    font-family: evolventa;
+    src: url(/evolventa.ttf);
+}
+
+h1 {
+    font-family: evolventa;
+    font-style: normal;
+    font-size: 2rem;
+}
+
+h2 {
+    font-family: evolventa;
+    font-style: normal;
+    font-size: 1.35rem;
+}
+
+h3 {
+    font-family: evolventa;
+    font-style: normal;
+    font-size: 1.15rem;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+a:hover {
+    color: orange;
+}
+
+a.honk {
+    animation: quacko 3s linear 1s 1;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+@keyframes quacko {
+    35% {
+        color: orange;
+    }
+    65% {
+        color: orange;
+    }
+}
+
+ion-icon {
+    font-size: 148px;
+    margin-bottom: 10px;
+}
+
+.vjmes-logoboy {
+    opacity: 50%;
+    background-image: url(/duck.svg), none;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    margin-bottom: 30px;
+    width: 100px;
+    height: 100px;
+    order: 1;
+}
+
+.vjmes-discoverables {
+    order: 2;
+    opacity: 90%;
+}
+
+ion-icon {
+    font-size: 64px;
+}
+
+.fxb-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.fxb-block {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    // background-color: pink;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.fxb-overlay {
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    background-color: rgba($color: #dba450, $alpha: 0.3);
+    opacity: 0%;
+    z-index: 50;
+}
+
+.fxb-overlay:hover {
+    color: rgba($color: orange, $alpha: 1.0);
+    transition: 0.5s;
+    opacity: 100%;
+}
+
+.fxb-overlay:hover + ion-icon {
+    opacity: 20%;
+    transition: 0.5s;
+}
+
+// This is dumb
+.fxb-overlay:hover + ion-icon + h2 {
+    opacity: 20%;
+    transition: 0.5s;
+}
+
+.vjmes-bottom {
+    font-size: 1rem;
+    font-family: evolventa;
+    position: absolute;
+    bottom: 50px;
+    order: 3;
+}

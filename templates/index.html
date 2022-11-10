@@ -1,3 +1,8 @@
-<head><title>🐤VJmes</title>
-<link rel="stylesheet" href="css/honk.css"></head>
-<body>What is this...A website for a&nbsp;<i class="honk">duck</i><br><br>🍞</body>
+{% extends "base.html" %}
+
+{% block content %}
+<body>
+<h1>What is this...a website for a
+<a href="{{ get_url(path='@/beta/_index.md') }}" class="honk">duck</a>?</h1>
+</body>
+{% endblock content %}
