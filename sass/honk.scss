@@ -12,25 +12,20 @@ body {
     font-size: 2rem;
 }
 
-@font-face {
-    font-family: evolventa;
-    src: url(/evolventa.ttf);
-}
-
 h1 {
-    font-family: evolventa;
+    font-family: Inter, Helvetica, Arial, sans-serif;
     font-style: normal;
     font-size: 2rem;
 }
 
 h2 {
-    font-family: evolventa;
+    font-family: Inter;
     font-style: normal;
     font-size: 1.35rem;
 }
 
 h3 {
-    font-family: evolventa;
+    font-family: Inter;
     font-style: normal;
     font-size: 1.15rem;
 }
