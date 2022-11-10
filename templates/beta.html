@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block content %}
+<body style="flex-direction: column;">
+<!--Insert Duck Logo-->
+<div class="vjmes-logoboy"></div>
+<!--Insert table of contents-->
+<div class="vjmes-discoverables">
+    <div class="fxb-row" role="rowgroup">      
+        <div class="fxb-block coming-soon" role="cell">
+            <div class="fxb-overlay"><h3>Coming Soon</h3></div>
+            <ion-icon name="newspaper" role="img" class="md hydrated" aria-label="newspaper"></ion-icon><h2>Blog</h2>
+        </div>
+        <div class="fxb-block coming-soon" role="cell">
+            <div class="fxb-overlay"><h3>Coming Soon</h3></div>
+            <ion-icon name="flask" role="img" class="md hydrated" aria-label="flask"></ion-icon><h2>Lab</h2>
+        </div>
+    </div>
+    <div class="fxb-row" role="rowgroup">
+        <a href="https://twitter.com/vjmes">
+            <div class="fxb-block" role="cell">
+                <ion-icon name="logo-twitter" role="img" class="md hydrated" aria-label="logo twitter"></ion-icon><h2>Twitter</h2>
+            </div>
+        </a>
+        <a href="https://aus.social/@vjmes">
+            <div class="fxb-block" role="cell">
+                <ion-icon name="logo-mastodon" role="img" class="md hydrated" aria-label="logo mastodon"></ion-icon><h2>Mastodon</h2>
+            </div>
+        </a>
+    </div>
+    <div class="fxb-row" role="rowgroup">
+        <a href="https://github.com/VJmes">
+            <div class="fxb-block" role="cell">
+                <ion-icon name="logo-github" role="img" class="md hydrated" aria-label="logo github"></ion-icon><h2>Github</h2>
+            </div>
+        </a>
+        <a href="https://instagram.com/vjmes">
+            <div class="fxb-block" role="cell">
+                <ion-icon name="logo-instagram" role="img" class="md hydrated" aria-label="logo instagram"></ion-icon><h2>Instagram</h2>
+            </div>
+        </a>
+    </div>
+    <div class="fxb-row" role="rowgroup">
+        <a href="https://www.reddit.com/user/VJmes">
+            <div class="fxb-block" role="cell">
+                <ion-icon name="logo-reddit" role="img" class="md hydrated" aria-label="logo reddit"></ion-icon><h2>Reddit</h2>
+            </div>
+        </a>
+        <a href="https://steamcommunity.com/id/NeoSanity/">
+            <div class="fxb-block" role="cell">
+                <ion-icon name="logo-steam" role="img" class="md hydrated" aria-label="logo steam"></ion-icon><h2>Steam</h2>
+            </div>
+        </a>
+    </div>
+</div>
+{% endblock content %}
