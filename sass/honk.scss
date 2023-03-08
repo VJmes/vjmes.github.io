@@ -22,13 +22,13 @@ h1 {
 h2 {
     font-family: Inter;
     font-style: normal;
-    font-size: 1.35rem;
+    font-size: 1rem;
 }
 
 h3 {
     font-family: Inter;
     font-style: normal;
-    font-size: 1.15rem;
+    font-size: 0.9rem;
 }
 
 h3.cs-overlay {
@@ -54,8 +54,6 @@ a:hover {
 
 a.honk {
     animation: quacko 3s linear 1s 1;
-    text-decoration: underline;
-    font-style: italic;
 }
 
 @keyframes quacko {
@@ -68,7 +66,7 @@ a.honk {
 }
 
 ion-icon {
-    font-size: 1.5em;
+    font-size: 4rem;
 }
 
 .vjmes-logarino {
@@ -78,30 +76,24 @@ ion-icon {
 }
 
 .vjmes-dispic {
-    // opacity: 80%;
-    border: 3px solid white;
+    border: 0.3rem solid rgb(220, 220, 220);
     border-radius: 100%;
     background-repeat: no-repeat;
     background-size: 100% auto;
-    margin-top: 2em;;
-    margin-bottom: 40%;
-    width: 3em;
-    height: 3em;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    width: 6rem;
+    height: 6rem;
 }
 
 .vjmes-discoverables {
     flex: 5;
     display: flex;
     flex-direction: column;
-    //width: 100%;
+    width: 100%;
     order: 2;
-    //opacity: 90%;
     overflow-y: scroll;
 }
-
-//ion-icon {
-//    font-size: 64px;
-//}
 
 .fxb-row {
     display: flex;
@@ -109,8 +101,9 @@ ion-icon {
     justify-content: space-evenly;
     flex-direction: row;
     flex-wrap: nowrap;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding: 0;
 }
 
 .fxb-block {
@@ -120,12 +113,12 @@ ion-icon {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    width: 4.20em;
-    height: 4.20em;
+    width: 6rem;
+    height: 6rem;
     opacity: 0.75;
     flex-grow: 0;
     flex-shrink: 0;
-    padding-bottom: 0.25em;
+    padding-bottom: 2rem;
 }
 
 @media screen and (min-width: 600px) {
@@ -134,12 +127,29 @@ ion-icon {
     }
 
     .fxb-block {
-        width: 5.5em;
-        height: 5.5em;
+        width: 11rem;
+        height: 11rem;
     }
     
     ion-icon {
-        font-size: 2.25em;
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 1.35rem;
+    }
+    
+    h3 {
+        font-size: 1.15rem;
+    }
+
+    .vjmes-bottom {
+        font-size: 1rem;
+        background-image: url(/dust-bg.svg), none;
+        background-size: 25% auto;
+        background-color: white;
+        padding-bottom: 3.75rem;
+        padding-top: 0.75rem;
     }
 }
 
@@ -153,7 +163,7 @@ ion-icon {
     transition: 0.5s;
     color: rgba($color: orange, $alpha: 1.0);
     background-color: rgba($color: orange, $alpha: 0.2);
-    border-radius: 0.8em;
+    border-radius: 0.8rem;
 }
 
 .fxb-overlay:hover > .fxb-block > ion-icon,
@@ -165,17 +175,15 @@ ion-icon {
 .vjmes-bottom {
     flex: 1;
     display: flex;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-family: Inter, Helvetica, Arial, sans-serif;
     position: absolute;
     bottom: 0;
     order: 3;
-    background-image: url(/dust-bg.svg), none;
-    background-size: 25% auto;
-    background-color: white;
+    background-color: rgb(220, 220, 220);
     z-index: 100;
     width: 100%;
     justify-content: center;
-    padding-bottom: 3.75em;
-    padding-top: 0.75em;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
 }
