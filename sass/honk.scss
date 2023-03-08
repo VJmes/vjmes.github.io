@@ -1,7 +1,6 @@
 body {
     background-image: url(/dust-bg.svg), none;
     background-size: 25% auto;
-    background-color: white;
     height: 100%;
     width: 100%;
     display: flex;
@@ -10,6 +9,8 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 2rem;
+    z-index: 150;
+    margin: 0;
 }
 
 h1 {
@@ -28,6 +29,17 @@ h3 {
     font-family: Inter;
     font-style: normal;
     font-size: 1.15rem;
+}
+
+h3.cs-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    text-align: center;
+    width: inherit;
+    height: inherit;
+    opacity: 0%;
 }
 
 a {
@@ -56,32 +68,45 @@ a.honk {
 }
 
 ion-icon {
-    font-size: 148px;
-    margin-bottom: 10px;
+    font-size: 1.5em;
 }
 
-.vjmes-logoboy {
-    opacity: 50%;
-    background-image: url(/duck.svg), none;
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    margin-bottom: 30px;
-    width: 100px;
-    height: 100px;
+.vjmes-logarino {
+    flex: 1;
+    display: flex;
     order: 1;
 }
 
-.vjmes-discoverables {
-    order: 2;
-    opacity: 90%;
+.vjmes-dispic {
+    // opacity: 80%;
+    border: 3px solid white;
+    border-radius: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    margin-top: 2em;;
+    margin-bottom: 40%;
+    width: 3em;
+    height: 3em;
 }
 
-ion-icon {
-    font-size: 64px;
+.vjmes-discoverables {
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    //width: 100%;
+    order: 2;
+    //opacity: 90%;
+    overflow-y: scroll;
 }
+
+//ion-icon {
+//    font-size: 64px;
+//}
 
 .fxb-row {
     display: flex;
+    width: 100%;
+    justify-content: space-evenly;
     flex-direction: row;
     flex-wrap: nowrap;
     padding-left: 10px;
@@ -89,53 +114,68 @@ ion-icon {
 }
 
 .fxb-block {
+    flex: 1;
     position: relative;
     display: inline-flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    width: 200px;
-    height: 200px;
-    // background-color: pink;
+    width: 4.20em;
+    height: 4.20em;
+    opacity: 0.75;
     flex-grow: 0;
     flex-shrink: 0;
+    padding-bottom: 0.25em;
+}
+
+@media screen and (min-width: 600px) {
+    .vjmes-discoverables {
+        width: 600px;
+    }
+
+    .fxb-block {
+        width: 5.5em;
+        height: 5.5em;
+    }
+    
+    ion-icon {
+        font-size: 2.25em;
+    }
 }
 
 .fxb-overlay {
-    border-radius: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    text-align: center;
-    width: 200px;
-    height: 200px;
-    background-color: rgba($color: #dba450, $alpha: 0.3);
-    opacity: 0%;
+    opacity: 100%;
     z-index: 50;
 }
 
-.fxb-overlay:hover {
-    color: rgba($color: orange, $alpha: 1.0);
-    transition: 0.5s;
+.fxb-overlay:hover h3.cs-overlay {
     opacity: 100%;
-}
-
-.fxb-overlay:hover + ion-icon {
-    opacity: 20%;
     transition: 0.5s;
+    color: rgba($color: orange, $alpha: 1.0);
+    background-color: rgba($color: orange, $alpha: 0.2);
+    border-radius: 0.8em;
 }
 
-// This is dumb
-.fxb-overlay:hover + ion-icon + h2 {
+.fxb-overlay:hover > .fxb-block > ion-icon,
+.fxb-overlay:hover > .fxb-block > ion-icon + h2 {
     opacity: 20%;
     transition: 0.5s;
 }
 
 .vjmes-bottom {
+    flex: 1;
+    display: flex;
     font-size: 1rem;
     font-family: Inter, Helvetica, Arial, sans-serif;
     position: absolute;
-    bottom: 50px;
+    bottom: 0;
     order: 3;
+    background-image: url(/dust-bg.svg), none;
+    background-size: 25% auto;
+    background-color: white;
+    z-index: 100;
+    width: 100%;
+    justify-content: center;
+    padding-bottom: 3.75em;
+    padding-top: 0.75em;
 }
